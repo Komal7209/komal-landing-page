@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Komal Pal | Senior SDE, Tech Educator, Mentor and Public Speaker">
+<title>Komal Pal | Tech, Career & Community</title>
+<style>
+:root{
+  --ink:#251c36;
+  --muted:#756d83;
+  --white:#fff;
+  --purple:#7c5cff;
+  --pink:#ff6fae;
+  --orange:#ff9a62;
+  --blue:#5d8cff;
+  --mint:#58d6b1;
+  --yellow:#ffd76a;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+  font-family:Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  color:var(--ink);
+  min-height:100vh;
+  padding:34px 16px 60px;
+  background:
+    radial-gradient(circle at 8% 8%,rgba(255,111,174,.24),transparent 26%),
+    radial-gradient(circle at 92% 16%,rgba(93,140,255,.22),transparent 27%),
+    radial-gradient(circle at 18% 88%,rgba(88,214,177,.20),transparent 25%),
+    linear-gradient(135deg,#fff8fc 0%,#f7f4ff 45%,#f2fbff 100%);
+  background-attachment:fixed;
+}
+a{text-decoration:none;color:inherit}
+.page{width:100%;max-width:720px;margin:auto}
+.hero{
+  position:relative;
+  overflow:hidden;
+  text-align:center;
+  padding:34px 22px 28px;
+  border-radius:32px;
+  background:rgba(255,255,255,.72);
+  border:1px solid rgba(255,255,255,.9);
+  box-shadow:0 18px 55px rgba(65,45,105,.10);
+  backdrop-filter:blur(12px);
+}
+.hero:before,.hero:after{
+  content:"";position:absolute;border-radius:50%;filter:blur(2px);z-index:-1
+}
+.hero:before{width:180px;height:180px;background:#ffd7e8;left:-70px;top:-80px}
+.hero:after{width:170px;height:170px;background:#dcd5ff;right:-70px;bottom:-80px}
+.avatar-wrap{
+  width:104px;height:104px;margin:0 auto 16px;padding:4px;border-radius:50%;
+  background:linear-gradient(135deg,var(--pink),var(--purple),var(--blue),var(--mint));
+  box-shadow:0 12px 30px rgba(124,92,255,.22);
+}
+.avatar{
+  width:100%;height:100%;border-radius:50%;display:grid;place-items:center;
+  background:linear-gradient(135deg,#6d4aff,#a65cff);
+  color:white;font-size:31px;font-weight:900;border:4px solid white
+}
+h1{font-size:clamp(31px,7vw,42px);letter-spacing:-1.6px;line-height:1.05}
+.handle{margin-top:7px;color:var(--purple);font-weight:750;font-size:15px}
+.bio{max-width:560px;margin:14px auto 0;font-size:16px;line-height:1.6;color:#574e66}
+.highlight{
+  display:inline-block;margin-top:14px;padding:8px 13px;border-radius:999px;
+  background:linear-gradient(90deg,#fff0f6,#f0edff);
+  color:#5b3fb5;font-size:13px;font-weight:800
+}
+.stats{display:flex;justify-content:center;flex-wrap:wrap;gap:8px;margin-top:18px}
+.pill{
+  padding:8px 12px;border-radius:999px;font-size:12px;font-weight:750;
+  background:white;border:1px solid #eee8f7;box-shadow:0 4px 12px rgba(60,40,90,.04)
+}
+.section-title{
+  margin:28px 6px 11px;font-size:12px;font-weight:900;text-transform:uppercase;
+  letter-spacing:1.5px;color:#756b87
+}
+.card{
+  --c1:#fff;--c2:#fff;
+  position:relative;display:flex;align-items:center;gap:14px;
+  padding:17px;margin:11px 0;border-radius:22px;
+  background:linear-gradient(110deg,var(--c1),var(--c2));
+  border:1px solid rgba(255,255,255,.8);
+  box-shadow:0 10px 26px rgba(57,39,89,.07);
+  transition:transform .2s ease,box-shadow .2s ease;
+}
+.card:hover{transform:translateY(-3px) scale(1.005);box-shadow:0 16px 34px rgba(57,39,89,.13)}
+.icon{
+  width:52px;height:52px;flex:0 0 52px;border-radius:17px;display:grid;place-items:center;
+  background:rgba(255,255,255,.78);font-size:23px;font-weight:900;
+  box-shadow:inset 0 0 0 1px rgba(255,255,255,.8)
+}
+.copy{min-width:0;padding-right:24px}
+.title{font-size:16px;font-weight:850;line-height:1.25}
+.desc{font-size:13px;color:#665e72;line-height:1.42;margin-top:4px}
+.arrow{position:absolute;right:17px;top:50%;transform:translateY(-50%);font-size:21px;font-weight:800}
+.topmate{--c1:#f0eaff;--c2:#e6f1ff}
+.course{--c1:#fff0f6;--c2:#fff4df}
+.youtube{--c1:#ffe8eb;--c2:#fff3f4}
+.linkedin{--c1:#e7f3ff;--c2:#eef4ff}
+.whatsapp{--c1:#e5fff5;--c2:#edfff1}
+.announce{--c1:#fff5d9;--c2:#fff0e9}
+.telegram{--c1:#e7f6ff;--c2:#eef1ff}
+.discord{--c1:#eeebff;--c2:#f7ecff}
+.featured{
+  color:white;
+  background:linear-gradient(120deg,#7048ff 0%,#9b5cff 46%,#ff6fae 100%);
+  box-shadow:0 15px 35px rgba(124,92,255,.25);
+}
+.featured .desc{color:#f0eaff}
+.featured .icon{background:rgba(255,255,255,.16)}
+.badge{
+  display:inline-block;margin-bottom:6px;padding:4px 8px;border-radius:999px;
+  background:rgba(255,255,255,.92);color:#6947db;font-size:9px;font-weight:900;
+  letter-spacing:1px;text-transform:uppercase
+}
+.community-note{
+  text-align:center;padding:18px 20px;margin-top:25px;border-radius:22px;
+  background:linear-gradient(120deg,#fff0f7,#f0efff,#eafff8);
+  border:1px solid white;font-size:14px;line-height:1.55;color:#5d536b
+}
+.socials{display:flex;justify-content:center;gap:10px;margin-top:24px}
+.social{
+  width:48px;height:48px;border-radius:16px;display:grid;place-items:center;
+  background:white;border:1px solid #eee8f7;font-size:18px;font-weight:900;
+  box-shadow:0 8px 20px rgba(57,39,89,.06);transition:transform .2s ease
+}
+.social:hover{transform:translateY(-3px)}
+footer{text-align:center;margin-top:25px;color:#91899d;font-size:12px}
+@media(max-width:480px){
+  body{padding:18px 13px 45px}
+  .hero{padding:28px 16px 24px;border-radius:27px}
+  .card{padding:14px;border-radius:19px}
+  .icon{width:46px;height:46px;flex-basis:46px;border-radius:15px}
+  .desc{font-size:12.5px}
+}
+</style>
+</head>
+<body>
+<main class="page">
+
+<section class="hero">
+  <div class="avatar-wrap"><div class="avatar">KP</div></div>
+  <h1>Hey, I'm Komal 👋</h1>
+  <div class="handle">@techwith_komal</div>
+  <p class="bio">👩🏻‍💻 Senior SDE helping aspiring developers learn tech, become job-ready and grow their careers.</p>
+  <div class="highlight">✨ Learn • Build • Grow in Tech</div>
+  <div class="stats">
+    <span class="pill">💼 50K+ LinkedIn</span>
+    <span class="pill">▶️ 5K+ YouTube</span>
+    <span class="pill">🎤 Public Speaker</span>
+    <span class="pill">🌱 Mentor</span>
+  </div>
+</section>
+
+<div class="section-title">✨ Start Here</div>
+
+<a class="card featured" href="#" target="_blank" rel="noopener noreferrer">
+  <div class="icon">☕</div>
+  <div class="copy">
+    <span class="badge">1:1 With Komal</span>
+    <div class="title">Book a Session on Topmate</div>
+    <div class="desc">Career guidance, interview prep, mentorship and personalized tech advice.</div>
+  </div>
+  <div class="arrow">↗</div>
+</a>
+
+<a class="card course" href="#" target="_blank" rel="noopener noreferrer">
+  <div class="icon">🤖</div>
+  <div class="copy">
+    <div class="title">Hands-On Copilot Course</div>
+    <div class="desc">Learn practical GitHub Copilot workflows and use AI effectively while coding.</div>
+  </div>
+  <div class="arrow">↗</div>
+</a>
+
+<div class="section-title">📚 Learn & Connect</div>
+
+<a class="card youtube" href="#" target="_blank" rel="noopener noreferrer">
+  <div class="icon">▶️</div>
+  <div class="copy">
+    <div class="title">YouTube</div>
+    <div class="desc">Tech tutorials, software engineering, AI and career content.</div>
+  </div>
+  <div class="arrow">↗</div>
+</a>
+
+<a class="card linkedin" href="#" target="_blank" rel="noopener noreferrer">
+  <div class="icon">in</div>
+  <div class="copy">
+    <div class="title">LinkedIn</div>
+    <div class="desc">Join 50K+ people following my tech and career journey.</div>
+  </div>
+  <div class="arrow">↗</div>
+</a>
+
+<div class="section-title">🌈 Join My Tech Communities</div>
+
+<a class="card whatsapp" href="#" target="_blank" rel="noopener noreferrer">
+  <div class="icon">💬</div>
+  <div class="copy">
+    <div class="title">WhatsApp Conversation Community</div>
+    <div class="desc">Ask questions, discuss tech and connect with other developers.</div>
+  </div>
+  <div class="arrow">↗</div>
+</a>
+
+<a class="card announce" href="#" target="_blank" rel="noopener noreferrer">
+  <div class="icon">📣</div>
+  <div class="copy">
+    <div class="title">WhatsApp Announcements</div>
+    <div class="desc">Get new resources, events, opportunities and important updates.</div>
+  </div>
+  <div class="arrow">↗</div>
+</a>
+
+<a class="card telegram" href="#" target="_blank" rel="noopener noreferrer">
+  <div class="icon">✈️</div>
+  <div class="copy">
+    <div class="title">Telegram Community</div>
+    <div class="desc">Tech resources, learning material, opportunities and discussions.</div>
+  </div>
+  <div class="arrow">↗</div>
+</a>
+
+<a class="card discord" href="#" target="_blank" rel="noopener noreferrer">
+  <div class="icon">🎮</div>
+  <div class="copy">
+    <div class="title">Discord Community</div>
+    <div class="desc">Connect, learn together, discuss projects and grow with fellow developers.</div>
+  </div>
+  <div class="arrow">↗</div>
+</a>
+
+<div class="community-note">
+  💜 <strong>Building your career in tech?</strong><br>
+  Join the community, learn with others and stay connected with me across platforms.
+</div>
+
+<div class="socials">
+  <a class="social" href="#" target="_blank" aria-label="Instagram">◎</a>
+  <a class="social" href="#" target="_blank" aria-label="YouTube">▶</a>
+  <a class="social" href="#" target="_blank" aria-label="LinkedIn">in</a>
+</div>
+
+<footer>Made with 💜 by Komal • @techwith_komal</footer>
+
+</main>
+</body>
+</html>
